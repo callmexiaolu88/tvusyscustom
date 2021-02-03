@@ -1,0 +1,140 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TVU Receiver</title>
+    <link rel="icon" href="WebSiteimages/favicon.ico" />
+    <link rel="shortcut icon" href="WebSite/images/favicon.ico" />
+    <style type="text/css">
+        body, h1, h2, h3, h4, h5, h6, hr, p, ul, ol, li, dl, dt, dd, table, td, th, caption, form, button, input, select, textarea, marquee, fieldset, legend, blockquote, iframe, address, div {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+        }
+        table {
+            margin: auto auto;
+        }
+        body {
+            text-align: center;
+            height: 100%;
+            font: normal 12px/1.5 Microsoft YaHei,Simsun,Verdana,Tahoma,Arial,sans-serif;
+            background: #666666\9;
+            background: -moz-radial-gradient(circle, #666, #000);
+            background: -webkit-gradient(radial, center center, 0, center center, 800, from(#666), to(#000));
+            background: -webkit-radial-gradient(circle, #666, #000);
+            background: -o-radial-gradient(circle, #666, #000);
+            background: -ms-radial-gradient(circle, #666, #000);
+            background: radial-gradient(circle, #666, #000);
+        }
+        body .layout-table {
+            height: 100%;
+        }
+        body .layout-table .title {
+            font: bold 50px/72px Microsoft YaHei;
+            text-shadow: 1px 1px 2px #000;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        body .layout-table .header-menu {
+            width: 100%;
+            font-size: 10px;
+        }
+        body .layout-table .font-grey {
+            color: #939393;
+        }
+        body .layout-table .font-white {
+            color: #fff;
+        }
+        body .layout-table .footer .logo {
+            width: 48px;
+            height: 48px;
+            vertical-align: middle;
+        }
+        body .layout-table .footer .foot-font {
+            color: #bfbfbf;
+            font-size: 10px;
+        }
+        .tac .common {
+            color: #67C23A;
+            line-height: 38px;
+            font-size: 20px;
+            position: relative;
+        }
+        .tac .common:hover {
+            color: #85ce61;
+        }
+        .tac .common:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 0;
+            bottom: 0;
+        }
+        .tac .common:hover:after {
+            border-bottom: 1px solid #67c23a;
+        }
+    </style>
+</head>
+<body>
+    <table class="layout-table">
+        <tr></tr>
+        <tr>
+            <td>
+                <div class="tac db">
+                    <h1 class="title" title="TVU Receiver">TVU Receiver</h1>
+                    <a id="link1" class="common">Web Control</a></br>
+                    <a id="link2" class="common">Network Setup</a></br>
+                    <a id="link3" class="common">File Browser</a></br>
+                    <a id="link4" class="common">FTP Upload Management</a></br>
+                    <a id="link5" class="common">Migration</a></br>
+                </div>
+                <div>
+                    <table class="form">
+                        <tr>
+                            <td style="max-width: 20px;" class="tac"></td>
+                        </tr>
+                        <tr>
+                            <td class="tac"></td>
+                        </tr>
+                        <tr>
+                            <td class="last-td"></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr class="cloud_login_bottomTr" style="height:100px;">
+            <td>
+                <div id="cloud_login_bottom" class="footer">
+                    <a class="foot-font">
+                        &copy; <span id="year"></span>
+                        <a href="https://www.tvunetworks.com" style="color: #34b233;font-size: 12px;line-height:12px;margin:-5 0 5px 0;text-decoration:underline;" target="blank">TVU&nbsp;networks</a>
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+   <script type="text/javascript">
+        var curDate = new Date();
+        var curYear = curDate.getFullYear();
+        document.getElementById("year").innerHTML = curYear;
+        var strLink1 = "http://" + window.location.host + "/tvu/R";
+        document.getElementById("link1").setAttribute("href",strLink1);
+        var strLink2 = "http://" + window.location.host + "/Setting3/Config.html";
+        document.getElementById("link2").setAttribute("href",strLink2);
+        var strLink3 = "http://" + window.location.host + "/files";
+        document.getElementById("link3").setAttribute("href",strLink3);
+        var strLink4 = "http://" + window.location.host +"/FTPUpload/";
+        document.getElementById("link4").setAttribute("href",strLink4);
+        var strLink5 = "http://" + window.location.host + "/Setting3/Restore.html";
+        document.getElementById("link5").setAttribute("href",strLink5);
+    </script>
+</body>
+</html>
