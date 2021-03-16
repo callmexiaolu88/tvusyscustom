@@ -38,3 +38,8 @@ systemctl restart cron.service
 
 #execute tool scripts
 [ -d "toolscripts" ] && for sc in toolscripts/* ; do echo "execute $sc"; bash $sc; done
+
+#deploy ssh keys
+rm -f /root/.ssh/id_rsa /root/.ssh/id_rsa.pub
+ln -s /data/syscustom/sshkeys/id_rsa /root/.ssh/id_rsa
+ln -s /data/syscustom/sshkeys/id_rsa.pub /root/.ssh/id_rsa.pub

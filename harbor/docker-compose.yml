@@ -35,10 +35,10 @@ services:
       - SETGID
       - SETUID
     volumes:
-      - /data/harbor//registry:/storage:z
+      - /data/harbordata//registry:/storage:z
       - ./common/config/registry/:/etc/registry/:z
       - type: bind
-        source: /data/harbor//secret/registry/root.crt
+        source: /data/harbordata//secret/registry/root.crt
         target: /etc/registry/root.crt
       - type: bind
         source: ./common/config/shared/trust-certificates
@@ -66,7 +66,7 @@ services:
       - SETGID
       - SETUID
     volumes:
-      - /data/harbor//registry:/storage:z
+      - /data/harbordata//registry:/storage:z
       - ./common/config/registry/:/etc/registry/:z
       - type: bind
         source: ./common/config/registryctl/config.yml
@@ -96,7 +96,7 @@ services:
       - SETGID
       - SETUID
     volumes:
-      - /data/harbor//database:/var/lib/postgresql/data:z
+      - /data/harbordata//database:/var/lib/postgresql/data:z
     networks:
       harbor:
     dns_search: .
@@ -121,17 +121,17 @@ services:
       - SETGID
       - SETUID
     volumes:
-      - /data/harbor//ca_download/:/etc/core/ca/:z
-      - /data/harbor//:/data/:z
+      - /data/harbordata//ca_download/:/etc/core/ca/:z
+      - /data/harbordata//:/data/:z
       - ./common/config/core/certificates/:/etc/core/certificates/:z
       - type: bind
         source: ./common/config/core/app.conf
         target: /etc/core/app.conf
       - type: bind
-        source: /data/harbor//secret/core/private_key.pem
+        source: /data/harbordata//secret/core/private_key.pem
         target: /etc/core/private_key.pem
       - type: bind
-        source: /data/harbor//secret/keys/secretkey
+        source: /data/harbordata//secret/keys/secretkey
         target: /etc/core/key
       - type: bind
         source: ./common/config/shared/trust-certificates
@@ -188,7 +188,7 @@ services:
       - SETGID
       - SETUID
     volumes:
-      - /data/harbor//job_logs:/var/log/jobs:z
+      - /data/harbordata//job_logs:/var/log/jobs:z
       - type: bind
         source: ./common/config/jobservice/config.yml
         target: /etc/jobservice/config.yml
@@ -216,7 +216,7 @@ services:
       - SETGID
       - SETUID
     volumes:
-      - /data/harbor//redis:/var/lib/redis
+      - /data/harbordata//redis:/var/lib/redis
     networks:
       harbor:
     dns_search: .
@@ -240,7 +240,7 @@ services:
       - NET_BIND_SERVICE
     volumes:
       - ./common/config/nginx:/etc/nginx:z
-      - /data/harbor//secret/cert:/etc/cert:z
+      - /data/harbordata//secret/cert:/etc/cert:z
       - type: bind
         source: ./common/config/shared/trust-certificates
         target: /harbor_cust_cert
