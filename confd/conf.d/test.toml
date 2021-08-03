@@ -1,0 +1,7 @@
+[template]
+src="test.toml.tmpl"
+dest="/tmp/test.conf"
+keys=[
+ "/path",
+ "/ls/colors"
+]

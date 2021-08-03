@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<libraryconfig>
+	<r>
+		<authserveraddress>
+			gridservice.tvunetworks.com
+		</authserveraddress>
+		<authserverport>
+			80
+		</authserverport>
+		<msgpipe>
+			<serverurl>
+				ws://10.12.22.95:54321/msgpipe/2
+			</serverurl>
+			<waitmsgtime>
+				6
+			</waitmsgtime>
+			<waitconnecttime>
+				6
+			</waitconnecttime>
+			<externalmsg>
+				<msg handler="config_cc_reverse_connect">
+					602
+				</msg>
+			</externalmsg>
+		</msgpipe>
+		<tpds>
+			<url>
+				http://tpsvc.tvunetworks.com/tp/servlet/OnlineRServlet
+			</url>
+			<interval>
+				10
+			</interval>
+		</tpds>
+	</r>
+</libraryconfig>

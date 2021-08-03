@@ -4,7 +4,7 @@ location ^~/R/Web/{
 }
 
 location ^~/R/WebRWebSite/WebR/ {  
-    alias  /WebR2/;
+    alias  /opt/tvu/web/WebR/;
     error_page 405 =200 $uri;
 }
 location /R/Ws {

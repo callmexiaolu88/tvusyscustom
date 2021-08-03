@@ -21,8 +21,8 @@ PORTAL_URL=http://portal:8080
 TOKEN_SERVICE_URL=http://core:8080/service/token
 HARBOR_ADMIN_PASSWORD=P1dkme17tvU
 MAX_JOB_WORKERS=10
-CORE_SECRET=YxD1uVaktK9UPpQr
-JOBSERVICE_SECRET=jrS64tjALu0AFBpT
+CORE_SECRET=qmSzRR9sTrHE2eMq
+JOBSERVICE_SECRET=NvUTcOOgn7YCdOrK
 WITH_NOTARY=False
 WITH_CLAIR=False
 WITH_TRIVY=False
@@ -39,12 +39,12 @@ CHART_REPOSITORY_URL=http://chartmuseum:9999
 REGISTRY_CONTROLLER_URL=http://registryctl:8080
 WITH_CHARTMUSEUM=False
 REGISTRY_CREDENTIAL_USERNAME=harbor_registry_user
-REGISTRY_CREDENTIAL_PASSWORD=gP79XkGUdMURkx4zmVyAnZlxJrb61kAi
-CSRF_KEY=EKo6vAIj0ylwD04cq4GcTlzdcrfvAa3z
+REGISTRY_CREDENTIAL_PASSWORD=NlGBcJ3AVx5rY2xi9jTIv6F7rg1w35JX
+CSRF_KEY=iNruwbiK22HMljrVlqch9tfUNbz5aTqr
 PERMITTED_REGISTRY_TYPES_FOR_PROXY_CACHE=docker-hub,harbor
 
 HTTP_PROXY=
 HTTPS_PROXY=
-NO_PROXY=postgresql,notary-signer,.internal,127.0.0.1,jobservice,chartmuseum,registry,nginx,trivy-adapter,redis,clair-adapter,log,db,clair,notary-server,core,registryctl,localhost,.local,portal
+NO_PROXY=redis,core,log,.local,postgresql,notary-signer,db,127.0.0.1,chartmuseum,nginx,clair,clair-adapter,localhost,portal,trivy-adapter,registry,notary-server,jobservice,registryctl,.internal
 
 PORT=8080

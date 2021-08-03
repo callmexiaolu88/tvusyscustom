@@ -4,7 +4,7 @@ location ^~/R/Web/{
 }
 
 location ^~/R/WebRWebSite/WebR/ {  
-    alias  /WebR2/;
+    alias  /opt/tvu/web/WebR/;
     error_page 405 =200 $uri;
 }
 location /R/Ws {
@@ -30,6 +30,13 @@ location ^~/Setting3/ {
 location ^~/FTPUpload/API {
     proxy_pass http://${RHOST}:${RPORT}$request_uri;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+}
+
+location ^~/tvu/FTPUpload {
+    index Default.html;
+    autoindex on;
+    alias  /FTPUploadService/;
+    error_page 405 =200 $uri;
 }
 
 location ^~/FTPUpload {
