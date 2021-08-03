@@ -1,1 +1,0 @@
-initSidebarItems({"fn":[["main",""],["test",""],["test1",""]]});
